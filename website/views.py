@@ -35,6 +35,8 @@ def home(request):
             <h1>Welcome to My Django Website!</h1>
             <p>Python Django is working successfully.</p>
             <p>Environment: Staging</p>
+             <p>Environment: 
+             </p>
         </div>
     </body>
     </html>
