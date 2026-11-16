@@ -1,0 +1,5 @@
+
+{
+  "python.defaultInterpreterPath": "/workspaces/shop.ajs/.venv/bin/python",
+  "python.terminal.activateEnvironment": true
+}
