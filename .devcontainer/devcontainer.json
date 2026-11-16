@@ -1,0 +1,7 @@
+
+{
+  "name": "Shop AJS Django Development",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postStartCommand": "bash .devcontainer/start-watcher.sh",
+  "forwardPorts": [8000]
+}
