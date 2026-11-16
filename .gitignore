@@ -10,3 +10,4 @@ db.sqlite3
 .ruff_cache/
 .coverage
 .DS_Store
+*.pyc
