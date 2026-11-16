@@ -173,7 +173,7 @@ def home(request):
         </section>
           <section class="content">
             <img src="{preview}"
-                 alt="AJS Cloud">
+                 alt="AJS Cloud LLC">
         </section>
     </body>
     </html>
