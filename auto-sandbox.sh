@@ -34,7 +34,7 @@ git add -A
 # Create commit if changes exist
 if ! git diff --cached --quiet; then
 
-    git commit -m "Auto sandbox update $(date '+%Y-%m-%d %H:%M:%S')"
+    git commit -m "Auto sandbox update $(TZ=America/Los_Angeles date '+%Y-%m-%d %I:%M:%S %p %Z')"
 
     echo "Changes committed."
 else
