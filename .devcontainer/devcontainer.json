@@ -3,5 +3,17 @@
   "name": "Shop AJS Django Development",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "postStartCommand": "bash .devcontainer/start-watcher.sh",
-  "forwardPorts": [8000]
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/shop.ajs/.venv/bin/python",
+        "python.terminal.activateEnvironment": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
 }
