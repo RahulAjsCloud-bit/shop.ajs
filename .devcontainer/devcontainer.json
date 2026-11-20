@@ -1,8 +1,8 @@
-
 {
   "name": "Shop AJS Django Development",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "postStartCommand": "bash /workspaces/shop.ajs/.devcontainer/start-watcher.sh",
+  "postAttachCommand": "bash /workspaces/shop.ajs/.devcontainer/start-watcher.sh",
   "forwardPorts": [8000],
   "customizations": {
     "vscode": {
