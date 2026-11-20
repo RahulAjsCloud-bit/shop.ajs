@@ -8,12 +8,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: promote-sandbox-to-staging
+  group: deploy-sandbox-to-staging
   cancel-in-progress: false
 
 jobs:
-  promote:
-    name: Promote sandbox to staging
+  deploy:
+    name: Promote Sandbox to Staging
     runs-on: ubuntu-latest
 
     steps:
@@ -21,22 +21,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
 
-      - name: Promote sandbox to staging
-        shell: bash
+      - name: Merge sandbox into staging
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git fetch origin sandbox
-          git fetch origin staging
-
+          git fetch origin sandbox staging
           git checkout -B staging origin/staging
+
           git merge --no-edit origin/sandbox
 
           git push origin HEAD:staging
 
-          echo "SUCCESS: Sandbox promoted to staging"
+          echo "SUCCESS: Sandbox promoted to staging!"
